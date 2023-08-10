@@ -1,13 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./pages/**.{ts,tsx,js,jsx}",
+    "./components/**/*.{ts,tsx,js}",
+    "./app/**/*.{ts,tsx,js}",
+    // "./src/**/*.{ts,tsx,js}",
     "./stories/**/*.{ts,tsx}",
+    // "./**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
     container: {
       center: true,

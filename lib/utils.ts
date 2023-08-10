@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
-}
+}                                                                                                         987
 
 export function getValidChildren(children: React.ReactNode) {
   return React.Children.toArray(children).filter((child) =>
@@ -30,7 +30,6 @@ export function getSize<TElement extends Element>(element: TElement) {
   const { width, height } = element.getBoundingClientRect();
   return { width, height };
 }
-
 export function computePercentage(value: number, percentage: number) {
   return (value * percentage) / 100;
 }
