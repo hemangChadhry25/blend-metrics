@@ -74,9 +74,6 @@ const Canvas = ({
     document.body.appendChild(marker);
   }
 
-  // first add 4 elements in the first row the add action and after adding action
-  // calculate the center points of all the above row the the top point to action and draw line
-
   useEffect(() => {
     let coordinated = [];
     if (temp.length > 0) {
@@ -94,8 +91,6 @@ const Canvas = ({
         const topCenterY = top;
         createMarker2(topCenterX, topCenterY);
         console.log("Bottom Center Point:", topCenterX, topCenterY);
-
-        // calculate here the bottom points of above row
 
         for (let i = 0; i < temp.length; i++) {
           elements[i] = document.getElementById(`ref${i + 1}`);
@@ -143,9 +138,9 @@ const Canvas = ({
     <>
       <div
         className=" flex h-screen w-screen flex-col items-center overflow-x-scroll overflow-y-scroll"
-        // style={{
-        //   backgroundImage: 'url("/Grid.png")',
-        // }}
+        style={{
+          backgroundImage: 'url("/Grid.png")',
+        }}
         id="canvas"
       >
         <div className="mt-20 flex h-[100px] min-w-[300px] flex-col items-center justify-center ">

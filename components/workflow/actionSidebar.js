@@ -26,7 +26,6 @@ const actionSidebar = ({ triggers }) => {
                         {...provided.dragHandleProps}
                         className="single-item"
                       >
-                        {/* <span className="icon">{item.icon}</span> */}
                         <Card className="my-2 border-gray-200 px-3 py-[18px]">
                           <div className="inline-flex gap-x-3">
                             <Avatar

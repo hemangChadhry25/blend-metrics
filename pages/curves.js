@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import go from "gojs";
 import { BasisCurve } from "react-svg-curve";
 const APP = {};
@@ -103,9 +103,9 @@ function threePoint() {
 function fourPoint() {
   const points = [
     [50, 50],
-    [50, 250],
+    [50, 350],
+    [750, 250],
     [750, 550],
-    [750, 50],
   ];
 
   drawPoints(points, "#00C000");
@@ -209,7 +209,7 @@ const Curves = () => {
 
   return (
     <>
-      <svg id="svg" className="h-[1000px] w-[1000px] border">
+      <svg id="svg" className="h-[600px] w-[800px] border">
         curves
       </svg>
       {/* <div id="myDiagramDiv" style={{ width: "500px", height: "500px" }}> */}

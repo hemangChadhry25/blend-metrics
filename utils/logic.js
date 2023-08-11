@@ -51,3 +51,45 @@ if (temp2.length > 0) {
   console.log(elements);
 }
 // }, [temp, temp2]);
+
+const workflow = {
+  workflow_id: "123456",
+  workflow_version: "1.0",
+  trigger_type: "webhook",
+  trigger_id: "789012",
+  source_system: "systemA",
+  source_user: "userA",
+  source: {
+    type: "api",
+    name: "API A",
+    version: "1.0",
+    description: "API A description",
+    environment_variables: {
+      env1: "value1",
+      env2: "value2",
+    },
+  },
+  trigger_settings: {
+    trigger_type: "webhook",
+    trigger_source: "appA",
+    trigger_data: {
+      data1: "value1",
+      data2: "value2",
+    },
+    trigger_conditions: {
+      condition1: "value1",
+      condition2: "value2",
+    },
+    trigger_frequency: "daily",
+    trigger_options: {
+      timeout: 10,
+      retry: 3,
+      error_handling: "fail",
+    },
+    integration_settings: {
+      auth_key: "key1",
+      endpoint: "http://api.example.com",
+      config_option: "value",
+    },
+  },
+};
