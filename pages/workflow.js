@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Sidebar from "@/components/ui/sidebar";
 import Canvas from "@/components/workflow/canvas";
 import { DragDropContext } from "react-beautiful-dnd";
@@ -49,9 +49,9 @@ const AboutPage = () => {
   const [secondDroppable, setSecondDroppable] = useState(false);
   const [showDragHere, setShowDragHere] = useState(true);
 
-  const handleDrag = (value) => {
-    console.log(value);
+  const divRef = useRef(null);
 
+  const handleDrag = (value) => {
     const randomString = generateRandomString(7);
 
     if (value.source.droppableId === "triggers") {
@@ -71,7 +71,7 @@ const AboutPage = () => {
 
     if (value.destination.droppableId === "canvas2") {
       const m = actions[value.source.index];
-      console.log(m);
+
       const obj = {
         id: `${randomString}`,
         value: `${m.value}`,

@@ -36,8 +36,10 @@ const workflowReducer = (state = initialState, action) => {
       return {
         ...state,
         selectedTrigger: null,
-        isTriggerModalOpen: true,
+        isTriggerModalOpen: false,
         isDetailModalOpen: false,
+        isVersionHistoryOpen: false,
+        isActionSidebarOpen: false,
       };
     case OPEN_ACTION_MODAL:
       return { ...state, isActionModalOpen: !state.isActionModalOpen };
