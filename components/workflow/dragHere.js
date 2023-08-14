@@ -6,7 +6,7 @@ const DragHere = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="relative z-10 ml-20 mt-14 flex min-w-[250px] flex-col p-8">
+    <div className="absolute z-10 flex min-w-[250px] flex-col p-8">
       <div className="flex flex-col border-2 border-dashed bg-gray-50 p-6">
         <p className="width-full text-center text-[16px]">
           Drag Your Trigger Here

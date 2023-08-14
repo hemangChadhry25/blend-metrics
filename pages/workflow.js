@@ -10,6 +10,7 @@ import VarsionSidebar from "../components/workflow/versionSidebar";
 import ActionSideBar from "../components/workflow/actionSidebar";
 import { triggersData, actionsData } from "../utils/data";
 import { selectTrigger } from "../store";
+import WorkflowTest from "../components/workflow/WorkflowTest";
 
 const { v4: uuidv4 } = require("uuid");
 
@@ -62,6 +63,7 @@ const AboutPage = () => {
           id: `${randomString}`,
           value: `${m.value}`,
           icon: m.icon,
+          type: m.type,
         };
         const newArr = [...temp, obj];
         setTemp(newArr);
@@ -76,6 +78,7 @@ const AboutPage = () => {
         id: `${randomString}`,
         value: `${m.value}`,
         icon: m.icon,
+        type: m.type,
       };
       const newArr = [...temp2, obj];
       setTemp2(newArr);
@@ -98,7 +101,7 @@ const AboutPage = () => {
   };
 
   return (
-    <>
+    <div className="max-w-screen max-h-screen">
       <div>
         <WorkflowNav temp={temp} temp2={temp2} />
       </div>
@@ -107,6 +110,7 @@ const AboutPage = () => {
         <DragDropContext onDragEnd={handleDrag} onDragStart={onDragStart}>
           <Canvas
             temp={temp}
+            setTemp={setTemp}
             temp2={temp2}
             setTemp2={setTemp2}
             secondDroppable={secondDroppable}
@@ -132,7 +136,8 @@ const AboutPage = () => {
       >
         clear data
       </button>
-    </>
+      <WorkflowTest />
+    </div>
   );
 };
 

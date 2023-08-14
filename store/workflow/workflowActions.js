@@ -9,6 +9,8 @@ import {
   CLOSE_TRIGGER_SIDEBAR,
   OPEN_ACTION_SIDEBAR,
   CLOSE_ACTION_SIDEBAR,
+  OPEN_TEST_MODAL,
+  CLOSE_TEST_MODAL,
 } from "./workflowTypes";
 
 export const selectTrigger = (trigger) => {
@@ -67,5 +69,17 @@ export const openActionSidebar = () => {
 export const closeActionSidebar = () => {
   return (dispatch) => {
     dispatch({ type: CLOSE_ACTION_SIDEBAR });
+  };
+};
+
+export const openTestModal = () => {
+  return (dispatch) => {
+    dispatch({ type: OPEN_TEST_MODAL });
+  };
+};
+
+export const closeTestModal = () => {
+  return (dispatch) => {
+    dispatch({ type: CLOSE_TEST_MODAL });
   };
 };

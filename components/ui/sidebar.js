@@ -6,8 +6,8 @@ import { Droppable, Draggable } from "react-beautiful-dnd";
 const sidebar = ({ triggers }) => {
   // console.log(triggers);
   return (
-    <div className="w-[386px]  border-l-2 px-5">
-      <h2 className="mx-10 my-5 text-[18px]  font-[300] capitalize">
+    <div className="mt-12 h-[683px] w-[402px]  self-stretch border-l-2 px-5 pt-[28px]">
+      <h2 className="mx-4 my-2 text-[20px]  font-[400] capitalize">
         choose a trigger type
       </h2>
       <Input placeholder="Find Triggers" type="email" className="my-5" />

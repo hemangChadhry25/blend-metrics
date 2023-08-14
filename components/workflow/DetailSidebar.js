@@ -18,7 +18,7 @@ const DetailSidebar = () => {
   const { selectedTrigger } = useSelector((state) => state.workflow);
 
   return (
-    <div className="mx-4  w-[20vw] border-l-2 pl-5">
+    <div className="z-100 mt-12 h-[683px] w-[402px] border-l-2 pl-5">
       <div className="border-b-2">
         <div className="mx-1 my-4  flex justify-between text-[18px] font-[300] capitalize">
           <div className="align-center flex">
@@ -26,10 +26,12 @@ const DetailSidebar = () => {
               <AppleGray />
             </div>
             <div>
-              <div className="mx-2">
+              <div className="mx-2 text-lg font-medium">
                 {selectedTrigger && selectedTrigger.value}
               </div>
-              <p className="mb-0 text-sm">trigger short description here</p>
+              <p className="mb-0 text-sm text-gray-500">
+                trigger short description here
+              </p>
             </div>
           </div>
           <div
@@ -67,7 +69,7 @@ const DetailSidebar = () => {
         </RadioGroup>
       </div>
       <div>
-        <h4 className="mx-4 my-4">connect your account</h4>
+        <h4 className="mx-4 my-4">Connect your account</h4>
         <Card className="p-3">
           <div className="flex justify-between gap-x-3">
             <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border-2 border-gray-200">
@@ -77,7 +79,7 @@ const DetailSidebar = () => {
               <span className=" text-sm font-medium text-gray-800">
                 connect your gmail account
               </span>
-              <div className=" my-1 ">
+              <div className=" ml-2 ">
                 <Button variant="outlined" visual="gray" leftIcon={<Plus />}>
                   connect
                 </Button>

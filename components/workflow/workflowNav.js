@@ -23,7 +23,7 @@ const WorkflowNav = ({ temp, temp2 }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className=" flex items-center justify-between border-b-2 p-1">
+    <div className=" absolute top-0 z-50 flex min-w-[100vw] items-center justify-between border-b-2 bg-white p-1">
       <div className="flex items-center justify-center">
         <div className=" rounded-lg border border-slate-400 p-3">
           <ArrowLeft2 />

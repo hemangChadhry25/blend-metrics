@@ -12,8 +12,9 @@ const HoverIcon = () => {
         dispatch(openTriggerSidebar());
         e.stopPropagation();
       }}
+      className="mb-8"
     >
-      <Plus className="relative z-10 ml-6 h-8 w-8 cursor-pointer rounded-full border bg-slate-300 transition duration-500 delay-150 ease-in-out" />
+      <Plus className="absolute mb-5 ml-6 h-8 w-8 cursor-pointer rounded-full border bg-slate-300 transition ease-in-out" />
     </div>
   );
 };

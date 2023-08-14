@@ -9,4 +9,6 @@ export {
   closeTriggerSidebar,
   openActionSidebar,
   closeActionSidebar,
+  openTestModal,
+  closeTestModal,
 } from "./workflow/workflowActions";

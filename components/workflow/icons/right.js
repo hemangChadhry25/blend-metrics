@@ -1,8 +1,8 @@
 import React from "react";
 
-function Icon() {
+function Right() {
   return (
-    <div className="mr-[125px]">
+    <div className="">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="144"
@@ -20,4 +20,4 @@ function Icon() {
   );
 }
 
-export default Icon;
+export default Right;

@@ -5,7 +5,7 @@ import { Droppable, Draggable } from "react-beautiful-dnd";
 
 const actionSidebar = ({ triggers }) => {
   return (
-    <div className="w-[386px]  border-l-2 px-5">
+    <div className="mt-12  w-[386px] border-l-2 px-5">
       <h2 className="mx-10 my-5 text-[18px]  font-[300] capitalize">
         choose a action type
       </h2>

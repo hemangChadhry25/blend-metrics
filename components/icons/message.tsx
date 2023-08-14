@@ -18,7 +18,7 @@ export const Message = ({
         stroke="#306CFE"
         stroke-width="1.5"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

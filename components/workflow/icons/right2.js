@@ -1,21 +1,23 @@
 import React from "react";
 
-function Icon() {
+function Right2() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="185"
-      height="61"
-      fill="none"
-      viewBox="0 0 185 61"
-    >
-      <path
-        stroke="#D0D5DD"
-        strokeWidth="1.5"
-        d="M184.333 59.8C17.983 58.468 1.071 27.505 1 .5"
-      ></path>
-    </svg>
+    <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="180"
+        height="85"
+        viewBox="0 0 190 83"
+        fill="none"
+      >
+        <path
+          d="M188.5 0.5C188.5 25.9264 177.22 39.5024 111.5 34.1899C16.3685 26.5 1.54264 60.5 1.5 82.5"
+          stroke="#D0D5DD"
+          stroke-width="1.5"
+        />
+      </svg>
+    </div>
   );
 }
 
-export default Icon;
+export default Right2;

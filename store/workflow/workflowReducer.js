@@ -9,6 +9,8 @@ import {
   CLOSE_TRIGGER_SIDEBAR,
   OPEN_ACTION_SIDEBAR,
   CLOSE_ACTION_SIDEBAR,
+  OPEN_TEST_MODAL,
+  CLOSE_TEST_MODAL,
 } from "./workflowTypes";
 
 const initialState = {
@@ -19,6 +21,7 @@ const initialState = {
   isActionModalOpen: false,
   isVersionHistoryOpen: false,
   isActionSidebarOpen: false,
+  isTestModalOpen: false,
 };
 
 const workflowReducer = (state = initialState, action) => {
@@ -99,6 +102,10 @@ const workflowReducer = (state = initialState, action) => {
         isVersionHistoryOpen: false,
         isActionSidebarOpen: false,
       };
+    case OPEN_TEST_MODAL:
+      return { ...state, isTestModalOpen: true };
+    case CLOSE_TEST_MODAL:
+      return { ...state, isTestModalOpen: false };
 
     default:
       return { ...state };

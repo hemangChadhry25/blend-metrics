@@ -103,7 +103,7 @@ function threePoint() {
 function fourPoint() {
   const points = [
     [50, 50],
-    [50, 350],
+    [100, 350],
     [750, 250],
     [750, 550],
   ];
