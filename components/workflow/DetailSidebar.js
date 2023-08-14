@@ -8,7 +8,7 @@ import {
   RadioGroupItemSelector,
 } from "../ui/index";
 import { AppleGray, Google, Plus, CheckCircle } from "../icons/index";
-import { Droppable, Draggable } from "react-beautiful-dnd";
+
 import { useSelector, useDispatch } from "react-redux";
 import { disselectTrigger } from "../../store";
 import DetailsTabs from "./detailsTabs";

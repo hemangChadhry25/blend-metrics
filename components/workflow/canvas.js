@@ -68,6 +68,7 @@ const Canvas = ({
   setPlus,
   setTemp,
   setTemp2,
+  zoomLevel,
 }) => {
   const dispatch = useDispatch();
   const { selectedTrigger } = useSelector((state) => state.workflow);
@@ -182,9 +183,12 @@ const Canvas = ({
   };
   return (
     <div
-      className=" flex max-h-screen w-[80vw]  flex-col items-center overflow-x-scroll overflow-y-scroll p-[150px] "
+      className=" flex max-h-screen w-[80vw]  flex-col items-center overflow-x-scroll overflow-y-scroll p-[150px] pb-0"
       style={{
         backgroundImage: 'url("/Grid.png")',
+        transform: `scale(${zoomLevel})`,
+        transformOrigin: "top left",
+        transition: "transform 0.2s ease-in-out",
       }}
       id="canvas"
     >

@@ -11,6 +11,7 @@ import ActionSideBar from "../components/workflow/actionSidebar";
 import { triggersData, actionsData } from "../utils/data";
 import { selectTrigger } from "../store";
 import WorkflowTest from "../components/workflow/WorkflowTest";
+import { Plus2 } from "../components/icons";
 
 const { v4: uuidv4 } = require("uuid");
 
@@ -49,6 +50,7 @@ const AboutPage = () => {
   const [plus, setPlus] = useState(true);
   const [secondDroppable, setSecondDroppable] = useState(false);
   const [showDragHere, setShowDragHere] = useState(true);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   const divRef = useRef(null);
 
@@ -106,7 +108,7 @@ const AboutPage = () => {
         <WorkflowNav temp={temp} temp2={temp2} />
       </div>
       {isActionModalOpen && <ActionModal />}
-      <div className="flex min-h-screen min-w-full overflow-x-scroll ">
+      <div className="flex min-h-screen min-w-full">
         <DragDropContext onDragEnd={handleDrag} onDragStart={onDragStart}>
           <Canvas
             temp={temp}
@@ -118,11 +120,26 @@ const AboutPage = () => {
             showDragHere={showDragHere}
             plus={plus}
             setPlus={setPlus}
+            zoomLevel={zoomLevel}
           />
           {isTriggerModalOpen && <Sidebar triggers={triggers} />}
           {isDetailModalOpen && <DetailSidebar />}
           {isVersionHistoryOpen && <VarsionSidebar />}
           {isActionSidebarOpen && <ActionSideBar triggers={actionsData} />}
+          <div className="fixed bottom-0 left-0 ">
+            <button
+              className="m-4 flex h-[25px] w-[25px] items-center justify-center bg-slate-300"
+              onClick={() => setZoomLevel(zoomLevel + 0.05)}
+            >
+              <Plus2 />
+            </button>
+            <button
+              className="m-4 flex h-[25px] w-[25px] items-center justify-center bg-slate-300"
+              onClick={() => setZoomLevel(zoomLevel - 0.05)}
+            >
+              -
+            </button>
+          </div>
         </DragDropContext>
       </div>
       <button
@@ -136,6 +153,7 @@ const AboutPage = () => {
       >
         clear data
       </button>
+
       <WorkflowTest />
     </div>
   );

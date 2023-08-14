@@ -10,7 +10,6 @@ const versionList = () => {
       <SingleVersion />
       <SingleVersion />
       <SingleVersion />
-      <SingleVersion />
     </div>
   );
 };
